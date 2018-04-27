@@ -1,0 +1,25 @@
+{
+  "name": "niduncs/shopify-laravel",
+  "version": "1.0.0-b",
+  "description": "A Shopify API library for use with Laravel",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Niall Duncan",
+      "email": "niduncs@gmail.com",
+      "homepage": "https://github.com/niduncs",
+      "role": "Developer"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^7.0",
+    "laravel/framework": "5.6.*",
+    "guzzlehttp/guzzle": "6.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "ShopifyLaravel\\": "src/"
+    }
+  }
+}
