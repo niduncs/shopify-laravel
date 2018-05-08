@@ -18,15 +18,13 @@ class ShopifyConfig
     {
         return $this->initialized
             && $this->shop
-            && $this->apiKey
-            && $this->scopes
-            && $this->redirectUri;
+            && $this->apiKey;
     }
 
     public function validRequest() : bool
     {
         return $this->initialized
-            && $this->accessToken
-            && $this->apiKey;
+            && $this->shop
+            && $this->accessToken;
     }
 }

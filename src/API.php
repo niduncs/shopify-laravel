@@ -21,6 +21,8 @@ class API
 
     public function buildAuthUrl() : string
     {
+        if (!$this->config->validAuth()) throw new \Exception("Invalid configuration");
+
         return StringHelpers::interpolate(
             Constants::SHOPIFY_AUTHORIZE_ENDPOINT_TEMPLATE,
             [
@@ -36,6 +38,8 @@ class API
 
     public function getToken(array $request) : string
     {
+        if (!$this->config->validAuth()) throw new \Exception("Configuration not valid.");
+
         $response = $this->client->request('POST', '/admin/oauth/access_token', ['body' => $request]);
         return $response->getBody()->access_token;
     }
