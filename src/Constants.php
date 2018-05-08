@@ -14,5 +14,5 @@ class Constants
 
     // Other
     const SHOPIFY_AUTHORIZE_ENDPOINT_TEMPLATE = "https://{shop}.myshopify.com/admin/oauth/authorize?client_id={api_key}&amp;scope={scopes}&amp;redirect_uri={redirect_uri}&amp;state={nonce}&amp;grant_options[]={option}";
-    const ENDPOINTS_CLASS_LOCATION_TEMPLATE = "ShopifyLaravel\\Endpoints\\:endpoint";
+    const ENDPOINTS_CLASS_LOCATION_TEMPLATE = "ShopifyLaravel\\Endpoints\\{endpoint}";
 }

@@ -2,17 +2,10 @@
 
 namespace ShopifyLaravel\Endpoints;
 
-use ShopifyLaravel\Config\ShopifyClient;
-
 class AbandonedCheckouts extends Endpoint
 {
     const COUNT_ENDPOINT = 'admin/abandoned_checkouts/count.json';
     const GET_ENDPOINT = 'admin/abandoned_checkouts.json';
-
-    protected function __construct(ShopifyClient $client)
-    {
-        parent::__construct($client);
-    }
 
     public function count(array $request) : int
     {
